@@ -1,0 +1,440 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #f5f5f5;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ── Header ── */
+header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+/* ── Main Content ── */
+#app {
+  min-height: 60vh;
+}
+
+/* ── Utility: view placeholder ── */
+.view-placeholder {
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+}
+
+/* ── Project List ── */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.list-header h2 {
+  margin: 0;
+}
+
+.btn-new {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1a1a1a;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.btn-new:hover {
+  background: #333;
+}
+
+.list-empty {
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+}
+
+.project-list ul {
+  list-style: none;
+}
+
+.project-item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.project-item a:hover {
+  border-color: #999;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.project-name {
+  font-weight: 600;
+}
+
+.project-id {
+  font-size: 0.8rem;
+  color: #888;
+  font-family: monospace;
+}
+
+/* ── Back Link ── */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #1a1a1a;
+}
+
+/* ── Project Detail ── */
+.detail-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-meta {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.detail-meta div {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-meta dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 0.15rem;
+}
+
+.detail-meta dd {
+  font-size: 0.95rem;
+}
+
+/* ── Intake Form ── */
+.create-project h2 {
+  margin-bottom: 1.25rem;
+}
+
+.intake-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.required {
+  color: #c00;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  color: #1a1a1a;
+  transition: border-color 0.15s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.btn-create {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-create:hover {
+  background: #333;
+}
+
+/* ── Project Guidance ── */
+.guidance {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.guidance h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.guidance-section {
+  margin-bottom: 0.75rem;
+}
+
+.guidance-section:last-child {
+  margin-bottom: 0;
+}
+
+.guidance-section h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+
+.guidance-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.guidance-activity {
+  list-style: none;
+  font-size: 0.85rem;
+}
+
+.guidance-activity li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #f5f5f5;
+  line-height: 1.4;
+  color: #444;
+}
+
+.guidance-activity li:last-child {
+  border-bottom: none;
+}
+
+.guidance-time {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #999;
+  margin-right: 0.5rem;
+}
+
+.guidance-suggestions {
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.guidance-suggestions li {
+  padding: 0.25rem 0;
+  color: #444;
+}
+
+.guidance-suggestions li::before {
+  content: "→ ";
+  color: #999;
+}
+
+/* ── PRD Section ── */
+.detail-prd {
+  margin-top: 1.5rem;
+}
+
+.detail-prd h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prd-content {
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+
+.prd-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.btn-generate {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-generate:hover {
+  background: #333;
+}
+
+.btn-generate:disabled {
+  background: #888;
+  cursor: default;
+}
+
+/* ── Actions ── */
+.detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.intent-select {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.btn-run {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-run:hover {
+  background: #333;
+}
+
+.btn-run:disabled {
+  background: #888;
+  cursor: default;
+}
+
+/* ── Output Log ── */
+.detail-logs {
+  margin-top: 1.5rem;
+}
+
+.detail-logs h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.log-list {
+  list-style: none;
+}
+
+.log-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.35rem;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.log-time {
+  font-size: 0.8rem;
+  color: #888;
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.log-msg {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.log-empty {
+  padding: 1.5rem;
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
