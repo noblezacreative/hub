@@ -1,4 +1,4 @@
-// ── app.js ──
+// — app.js —
 // Hash-based router. Reads window.location.hash and renders the right view.
 
 import { renderProjectList } from "./views/projectList.js";
@@ -10,9 +10,9 @@ const appEl = document.getElementById("app");
 function route() {
   const hash = window.location.hash || "#/";
 
-  // #/projects/new  → Create Project
-  // #/projects/:id  → Project Detail
-  // #/ (default)    → Project List
+  // #/projects/new   -> Create Project
+  // #/projects/:id   -> Project Detail
+  // #/               -> Project List
 
   if (hash === "#/projects/new") {
     appEl.innerHTML = renderCreateProject();
